@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import { PlanContextProvider } from '../context/PlanContext';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <PlanContextProvider>
+      <Component {...pageProps} />
+    </PlanContextProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
